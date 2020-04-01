@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Lista de produtos</h1>
+    <ul>
+        <% listaProdutos.forEach(produto => { %>
+            <li> <%= produto.nome %> </li>
+            <form action="/produtos/deletar/<%= produto.id %>?_method=DELETE" method="post">
+                <button type="submit">deletar</button>
+            </form>
+        <% }); %>
+    </ul>
+</body>
+</html>

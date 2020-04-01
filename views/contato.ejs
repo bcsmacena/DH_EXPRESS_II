@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá <%= nomeUsuario %>! Parabéns pelos seus <%= idadeUsuario %> anos!</h1>
+    <p>Atualize seus dados:</p>
+    <form action="/atualizaDados" method="GET">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="">
+        <button type="submit">Enviar</button>
+    
+    </form>
+</body>
+</html>
