@@ -8,9 +8,9 @@
 <body>
     <h1> Lista de produtos</h1>
     <ul>
-        <% listaProdutos.forEach(produto => { %>
+        <% listaProdutos.forEach((produto,index) => { %>
             <li> <%= produto.nome %> </li>
-            <form action="/produtos/deletar/<%= produto.id %>?_method=DELETE" method="post">
+            <form action="/produtos/deletar/<%= index %>?_method=DELETE" method="post">
                 <button type="submit">deletar</button>
             </form>
         <% }); %>

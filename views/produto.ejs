@@ -6,11 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cadastro de Produto</h1>
+    <h1>Criar Produto</h1>
     <form action="/produtos/criar" method="post">
         <input type="text" name="nomeProduto" id="">
         <input type="number" name="precoProduto" id="">
         <button type="submit">Enviar</button>
     </form>
+
+    <h1> Lista de produtos</h1>
+    <ul>
+        <% listaProdutos.forEach((produto,index) => { %>
+            <li> <%= produto.nome %> - R$<%= produto.preco %>
+                <form action="/produtos/deletar/<%= index %>?_method=DELETE" method="post" style="display: inline-block;">
+                    <button type="submit">deletar</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
 </body>
 </html>
