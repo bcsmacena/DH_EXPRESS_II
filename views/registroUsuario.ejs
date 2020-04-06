@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Cadastro de Usuario</h1>
-    <form action="/users/criar" method="post">
+    <form action="/users/criar" method="POST" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="senha">
         <br><br>
@@ -16,6 +16,9 @@
         <br><br>
         <label for="senha">Senha:</label>
         <input type="password" name="senha" id="senha">
+        <br><br>
+        <label for="avatar">Avatar: </label>
+        <input type="file" name="avatar" id="avatar">
         <br><br>
         <button type="submit">Salvar</button>
     </form>

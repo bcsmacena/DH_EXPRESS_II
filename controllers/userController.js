@@ -11,9 +11,9 @@ let userController = {
         res.render('registroUsuario');
     },
     salvarForm: (req, res) => {
-        let {nome, email, senha} = req.body;
+        let {nome, email, senha, avatar} = req.body;
         let senhaC = bcrypt.hashSync(senha, 10);
-        let usuario = JSON.stringify({nome, email, senha: senhaC});
+        let usuario = JSON.stringify({nome, email, senha: senhaC, avatar});
         fs.writeFileSync(usuarioJson, usuario);
         res.send("Usuário salvo com sucesso!");
     },
